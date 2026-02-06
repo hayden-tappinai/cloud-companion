@@ -1,4 +1,5 @@
-import { Sparkles, Code, Lightbulb, FileText } from "lucide-react";
+import { Code, Lightbulb, FileText, Sparkles } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 interface WelcomeScreenProps {
   onSuggestionClick: (text: string) => void;
@@ -14,9 +15,7 @@ const suggestions = [
 export function WelcomeScreen({ onSuggestionClick }: WelcomeScreenProps) {
   return (
     <div className="flex flex-1 flex-col items-center justify-center px-4 animate-fade-in">
-      <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 mb-6">
-        <Sparkles className="h-8 w-8 text-primary" />
-      </div>
+      <img src={logo} alt="me.com" className="h-14 mb-6" />
       <h1 className="text-2xl font-semibold text-foreground mb-2">How can I help you today?</h1>
       <p className="text-muted-foreground text-sm mb-10 max-w-md text-center">
         I can help you write, analyze, code, and more. Just ask me anything.

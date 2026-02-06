@@ -4,10 +4,10 @@ import {
   FolderKanban,
   Settings,
   Search,
-  Sparkles,
   ChevronDown,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const mockConversations = [
   { id: "1", title: "How to build a REST API", time: "2m ago" },
@@ -28,11 +28,8 @@ export function ChatSidebar({ onNewChat }: ChatSidebarProps) {
   return (
     <div className="flex h-full w-64 flex-col bg-sidebar border-r border-sidebar-border">
       {/* Brand */}
-      <div className="flex items-center gap-2 px-4 py-5">
-        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-          <Sparkles className="h-4 w-4 text-primary-foreground" />
-        </div>
-        <span className="text-lg font-semibold text-sidebar-accent-foreground tracking-tight">me.com</span>
+      <div className="flex items-center px-4 py-5">
+        <img src={logo} alt="me.com" className="h-8" />
       </div>
 
       {/* New Chat */}
