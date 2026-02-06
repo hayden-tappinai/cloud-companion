@@ -14,7 +14,7 @@ const suggestions = [
 
 export function WelcomeScreen({ onSuggestionClick }: WelcomeScreenProps) {
   return (
-    <div className="flex flex-1 flex-col items-center justify-center px-4 animate-fade-in">
+    <div className="flex flex-1 flex-col items-center justify-center px-4 animate-fade-in min-h-0">
       <img src={logo} alt="me.com" className="h-14 mb-6" />
       <h1 className="text-2xl font-semibold text-foreground mb-2">How can me help you today?</h1>
       <p className="text-muted-foreground text-sm mb-10 max-w-md text-center">
