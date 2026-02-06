@@ -30,7 +30,7 @@ export function ChatMessage({ message, isLast }: ChatMessageProps) {
             {isUser ? (
               <p className="whitespace-pre-wrap">{message.content}</p>
             ) : (
-              <div className="prose prose-invert prose-sm max-w-none prose-p:my-2 prose-pre:bg-secondary prose-pre:border prose-pre:border-border prose-code:text-primary prose-code:font-mono prose-headings:text-foreground prose-a:text-primary">
+              <div className="prose prose-sm max-w-none prose-p:my-2 prose-pre:bg-secondary prose-pre:border prose-pre:border-border prose-code:text-primary prose-code:font-mono prose-headings:text-foreground prose-a:text-primary">
                 <ReactMarkdown>{message.content}</ReactMarkdown>
               </div>
             )}
