@@ -22,7 +22,7 @@ export function ChatArea({ messages, isLoading, onSend }: ChatAreaProps) {
 
   return (
     <div className="flex flex-1 flex-col min-h-0">
-      <div ref={scrollRef} className="flex-1 overflow-y-auto scrollbar-thin">
+      <div ref={scrollRef} className="flex flex-1 flex-col overflow-y-auto scrollbar-thin">
         {messages.length === 0 ? (
           <WelcomeScreen onSuggestionClick={onSend} />
         ) : (
