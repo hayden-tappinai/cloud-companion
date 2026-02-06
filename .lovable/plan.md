@@ -1,40 +1,28 @@
 
 
-# me.com — AI Chatbot Interface
+# Switch to Light Mode
 
-A polished, Claude-inspired AI chatbot with a dark cool aesthetic, powered by Lovable Cloud for real AI responses.
+Update the CSS theme variables in `src/index.css` to use a light color palette while keeping the same structure and design.
 
-## Design
-- **Dark background** with blue/purple accent tones
-- Sleek, modern interface that looks like a premium AI product
-- "me.com" branding in the sidebar and header
+## Changes
 
-## Pages & Layout
+### 1. `src/index.css` -- Update CSS variables
+Replace the dark theme values with light equivalents:
 
-### 1. Sidebar
-- **me.com** logo/brand at the top
-- "New Chat" button
-- List of recent conversations (hardcoded/mock titles to look full)
-- Bottom section: fake user profile area, settings icon, theme toggle — all cosmetic
+- **background**: White/light gray (e.g., `0 0% 100%` or `220 20% 98%`)
+- **foreground**: Dark text (e.g., `228 14% 10%`)
+- **card**: Slightly off-white (e.g., `0 0% 100%`)
+- **card-foreground**: Dark text
+- **primary**: Keep the purple accent (`245 58% 64%`)
+- **secondary**: Light gray (`220 14% 94%`)
+- **muted**: Light gray tones
+- **border**: Light gray borders (`220 12% 88%`)
+- **sidebar**: Light sidebar background with appropriate foreground colors
+- **chat variables**: Light chat bubble colors
+- **scrollbar colors**: Update to light gray tones
 
-### 2. Chat Area
-- Clean message thread with distinct user/assistant bubbles
-- Markdown-rendered AI responses
-- Typing indicator animation while waiting for response
-- Welcome screen with suggested prompts when no conversation is active
+### 2. `src/components/chat/ChatMessage.tsx`
+- Change `prose-invert` to `prose` for proper light-mode markdown rendering
 
-### 3. Input Bar
-- Large text input with a send button at the bottom of the chat
-- Cosmetic attachment icon and model selector dropdown (non-functional, just for looks)
-
-## Backend (Lovable Cloud)
-- A Supabase edge function that calls an AI model to generate real responses
-- Conversation history sent with each request for context
-- No authentication — anyone can chat immediately
-
-## Polished Details
-- Smooth animations on message appear
-- Auto-scroll to latest message
-- Responsive layout (sidebar collapses on mobile)
-- A few fake menu items like "Projects", "Starred", "Settings" in the sidebar to make it look feature-rich
+No other files need changes since everything uses CSS variables.
 
