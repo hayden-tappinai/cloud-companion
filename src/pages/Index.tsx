@@ -29,17 +29,6 @@ const Index = () => {
 
       {/* Main */}
       <div className="flex flex-1 flex-col min-w-0">
-        {/* Top bar */}
-        <div className="flex h-12 items-center border-b border-border px-4">
-          <button
-            onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="rounded-md p-2 text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors md:mr-2"
-          >
-            {sidebarOpen ? <X className="h-5 w-5 md:hidden" /> : <Menu className="h-5 w-5" />}
-            <Menu className="hidden h-5 w-5 md:block" />
-          </button>
-          <span className="text-sm font-medium text-muted-foreground">me.com</span>
-        </div>
 
         <ChatArea messages={messages} isLoading={isLoading} onSend={sendMessage} />
       </div>
