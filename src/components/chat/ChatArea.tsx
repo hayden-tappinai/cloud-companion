@@ -26,7 +26,7 @@ export function ChatArea({ messages, isLoading, onSend }: ChatAreaProps) {
         {messages.length === 0 ? (
           <WelcomeScreen onSuggestionClick={onSend} />
         ) : (
-          <div className="pb-4">
+          <div className="pb-4 pt-8">
             {messages.map((m, i) => (
               <ChatMessage key={m.id} message={m} isLast={i === messages.length - 1} />
             ))}
