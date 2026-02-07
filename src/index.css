@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @layer base {
   :root {
@@ -49,49 +49,6 @@
     --chat-assistant: 0 0% 100%;
     --chat-hover: 220 14% 92%;
   }
-
-  .dark {
-    --background: 222 20% 8%;
-    --foreground: 210 40% 98%;
-
-    --card: 222 20% 10%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222 20% 10%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 220 58% 65%;
-    --primary-foreground: 220 10% 95%;
-
-    --secondary: 217 19% 15%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217 19% 15%;
-    --muted-foreground: 215 20% 65%;
-
-    --accent: 220 58% 65%;
-    --accent-foreground: 220 10% 95%;
-
-    --destructive: 0 62% 50%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217 19% 18%;
-    --input: 217 19% 18%;
-    --ring: 220 58% 65%;
-
-    --sidebar-background: 222 20% 10%;
-    --sidebar-foreground: 215 20% 75%;
-    --sidebar-primary: 220 58% 65%;
-    --sidebar-primary-foreground: 220 10% 95%;
-    --sidebar-accent: 217 19% 15%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 19% 18%;
-    --sidebar-ring: 220 58% 65%;
-
-    --chat-user: 217 19% 15%;
-    --chat-assistant: 222 20% 10%;
-    --chat-hover: 217 19% 18%;
-  }
 }
 
 @layer base {
@@ -108,7 +65,7 @@
 @layer utilities {
   .scrollbar-thin {
     scrollbar-width: thin;
-    scrollbar-color: hsl(var(--border)) transparent;
+    scrollbar-color: hsl(220 12% 88%) transparent;
   }
 
   .scrollbar-thin::-webkit-scrollbar {
@@ -120,16 +77,8 @@
   }
 
   .scrollbar-thin::-webkit-scrollbar-thumb {
-    background: hsl(var(--border));
+    background: hsl(220 12% 82%);
     border-radius: 3px;
-  }
-
-  .dark .scrollbar-thin {
-    scrollbar-color: hsl(217 19% 25%) transparent;
-  }
-
-  .dark .scrollbar-thin::-webkit-scrollbar-thumb {
-    background: hsl(217 19% 25%);
   }
 
   .typing-dot {
