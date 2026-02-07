@@ -7,6 +7,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme-toggle";
 import logo from "@/assets/logo.png";
 
 const mockConversations = [
@@ -90,10 +91,13 @@ export function ChatSidebar({ onNewChat }: ChatSidebarProps) {
           <span className="flex-1 text-left truncate">user@me.com</span>
           <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />
         </button>
-        <button className="mt-1 flex w-full items-center gap-2.5 rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-sidebar-accent hover:text-sidebar-foreground transition-colors">
-          <Settings className="h-4 w-4" />
-          Settings
-        </button>
+        <div className="mt-1 flex items-center gap-1">
+          <button className="flex flex-1 items-center gap-2.5 rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-sidebar-accent hover:text-sidebar-foreground transition-colors">
+            <Settings className="h-4 w-4" />
+            Settings
+          </button>
+          <ThemeToggle />
+        </div>
       </div>
     </div>
   );
